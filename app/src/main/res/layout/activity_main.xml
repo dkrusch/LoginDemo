@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.danielkrusch.logindemo.MainActivity">
+
+    <EditText
+        android:id="@+id/txtFldUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtFldPassword"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/txtFldPassword"
+        android:layout_marginTop="110dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/txtFldPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtFldUsername"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnReg"
+        android:layout_alignBottom="@+id/btnReg"
+        android:layout_alignLeft="@+id/txtFldPassword"
+        android:layout_alignStart="@+id/txtFldPassword"
+        android:onClick="onLogin"
+        android:text="Log-In" />
+
+    <Button
+        android:id="@+id/btnReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtFldPassword"
+        android:layout_alignRight="@+id/txtFldPassword"
+        android:layout_below="@+id/txtFldPassword"
+        android:onClick="onDisplayReg"
+        android:text="Register" />
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.danielkrusch.logindemo.Register">
+
+    <EditText
+        android:id="@+id/txtUserReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="107dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/txtPassReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtUserReg"
+        android:layout_alignRight="@+id/txtUserReg"
+        android:layout_below="@+id/txtUserReg"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/txtEmailReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtPassReg"
+        android:layout_alignRight="@+id/txtPassReg"
+        android:layout_below="@+id/txtPassReg"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtEmailReg"
+        android:layout_alignLeft="@+id/txtEmailReg"
+        android:layout_alignRight="@+id/txtEmailReg"
+        android:layout_alignStart="@+id/txtEmailReg"
+        android:layout_below="@+id/txtEmailReg"
+        android:onClick="onRegister"
+        android:text="Register" />
+</RelativeLayout>
