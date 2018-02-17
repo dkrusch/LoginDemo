@@ -24,13 +24,12 @@ class MainActivity : AppCompatActivity()
         val btnLoginMain = findViewById<View>(R.id.btnLog) as Button
         val btnRegisterMain = findViewById<View>(R.id.btnReg) as Button
 
+        //when user presses log-in button preferences are got and compared with entered strings
+        //if the entered strings don't match the preferences then option p1 is sent to the editor and displayed
         btnLog.setOnClickListener {
             val user = txtFldUsername.text.toString()
             val password = txtFldPassword.text.toString()
             val preferences = getSharedPreferences("MYPREFS", Context.MODE_PRIVATE)
-
-            //String savedPassword = preferences.getString(password, "");
-            //String savedUserName = preferences.getString(user, "");
 
             val userDetails = preferences.getString(user + password + "data", "No information on that user.")
             val editor = preferences.edit()
@@ -41,7 +40,7 @@ class MainActivity : AppCompatActivity()
             startActivity(displayScreen)
         }
 
-
+        //when register is clicked the register activity is started
         btnReg.setOnClickListener {
             val registerScreen = Intent(this@MainActivity, Register::class.java)
             startActivity(registerScreen)

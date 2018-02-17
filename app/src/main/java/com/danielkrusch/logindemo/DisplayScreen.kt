@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.display.*
 class DisplayScreen : AppCompatActivity()
 {
 
+    //gets current preferences and textview and sets it to the current preferences
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
